@@ -1,0 +1,572 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ShopProject — интернет-магазин диванов</title>
+    <meta
+      name="description"
+      content="Интернет-магазин диванов на Bootstrap: каталог, карточки товаров, форма заявки."
+    />
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/custom.css" />
+  </head>
+  <body class="d-flex flex-column min-vh-100" id="top">
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+          <a class="navbar-brand fw-bold" href="index.html">ShopProject</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNav"
+            aria-controls="mainNav"
+            aria-expanded="false"
+            aria-label="Открыть меню"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" href="index.html" aria-current="page"
+                  >Главная</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="catalog.html">Каталог</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="order.html">Оформить заявку</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contacts.html">Контакты</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  >Разделы</a
+                >
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="index.html#advantages"
+                      >Преимущества</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="index.html#popular"
+                      >Популярные товары</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="index.html#faq"
+                      >Вопросы и ответы</a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <button
+              class="btn btn-primary"
+              type="button"
+              data-bs-toggle="modal"
+              data-bs-target="#orderModal"
+            >
+              Заказать звонок
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero d-flex align-items-center">
+        <div class="container py-5">
+          <div class="row">
+            <div class="col-12 col-md-8 col-lg-6">
+              <span class="badge text-bg-warning mb-3">Весенняя коллекция</span>
+              <h1 class="display-4 fw-bold">Диваны для вашего дома</h1>
+              <p class="lead">
+                Мягкая мебель на любой вкус: от классического честерфилда до
+                лаконичного скандинавского стиля.
+              </p>
+              <div class="d-flex flex-wrap gap-2">
+                <a class="btn btn-primary btn-lg" href="catalog.html"
+                  >Перейти в каталог</a
+                >
+                <button
+                  class="btn btn-outline-light btn-lg"
+                  type="button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#orderModal"
+                >
+                  Оставить заявку
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="container py-5" id="advantages">
+        <h2 class="text-center mb-4">Наши преимущества</h2>
+        <div class="row g-4">
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card h-100 border-0 shadow-sm text-center p-3">
+              <div class="advantage-icon mx-auto mb-3" aria-hidden="true">
+                🛋
+              </div>
+              <h3 class="h5">Качественные материалы</h3>
+              <p class="text-body-secondary mb-0">
+                Бархат, велюр и рогожка от проверенных поставщиков.
+              </p>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card h-100 border-0 shadow-sm text-center p-3">
+              <div class="advantage-icon mx-auto mb-3" aria-hidden="true">
+                🚚
+              </div>
+              <h3 class="h5">Быстрая доставка</h3>
+              <p class="text-body-secondary mb-0">
+                Привезём и поднимем на этаж за 1–3 дня по городу.
+              </p>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card h-100 border-0 shadow-sm text-center p-3">
+              <div class="advantage-icon mx-auto mb-3" aria-hidden="true">
+                🛡
+              </div>
+              <h3 class="h5">Гарантия до 24 месяцев</h3>
+              <p class="text-body-secondary mb-0">
+                Обменяем или отремонтируем при заводском браке.
+              </p>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card h-100 border-0 shadow-sm text-center p-3">
+              <div class="advantage-icon mx-auto mb-3" aria-hidden="true">
+                💳
+              </div>
+              <h3 class="h5">Удобная оплата</h3>
+              <p class="text-body-secondary mb-0">
+                Наличными, картой или в рассрочку без переплат.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-soft py-5" id="popular">
+        <div class="container">
+          <div
+            class="d-flex flex-wrap justify-content-between align-items-center mb-4 gap-2"
+          >
+            <h2 class="mb-0">Популярные товары</h2>
+            <a class="btn btn-outline-primary" href="catalog.html"
+              >Весь каталог</a
+            >
+          </div>
+          <div class="row g-4">
+            <div class="col-12 col-md-6 col-lg-4">
+              <article class="card product-card h-100 position-relative">
+                <span
+                  class="badge text-bg-danger position-absolute product-card__badge"
+                  >Хит</span
+                >
+                <img
+                  class="card-img-top product-card__image"
+                  src="images/sofa-1.jpg"
+                  alt="Диван Amelia"
+                  width="640"
+                  height="480"
+                  loading="lazy"
+                />
+                <div class="card-body d-flex flex-column">
+                  <h3 class="card-title h5">Диван Amelia</h3>
+                  <p class="card-text text-body-secondary">
+                    Бежево-золотистый диван с бархатной обивкой и каретной
+                    стяжкой.
+                  </p>
+                  <p class="price fs-5 mt-auto mb-3">89 990 руб.</p>
+                  <div class="d-flex flex-wrap gap-2">
+                    <a
+                      class="btn btn-outline-primary flex-fill"
+                      href="product.html"
+                      >Подробнее</a
+                    >
+                    <button
+                      class="btn btn-primary flex-fill"
+                      type="button"
+                      data-bs-toggle="modal"
+                      data-bs-target="#orderModal"
+                      data-product="Диван Amelia"
+                    >
+                      Заказать
+                    </button>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+              <article class="card product-card h-100 position-relative">
+                <span
+                  class="badge text-bg-success position-absolute product-card__badge"
+                  >Новинка</span
+                >
+                <img
+                  class="card-img-top product-card__image"
+                  src="images/sofa-2.jpg"
+                  alt="Диван Nordic"
+                  width="640"
+                  height="480"
+                  loading="lazy"
+                />
+                <div class="card-body d-flex flex-column">
+                  <h3 class="card-title h5">Диван Nordic</h3>
+                  <p class="card-text text-body-secondary">
+                    Компактный диван в стиле ретро с синей бархатной обивкой.
+                  </p>
+                  <p class="price fs-5 mt-auto mb-3">54 990 руб.</p>
+                  <div class="d-flex flex-wrap gap-2">
+                    <a
+                      class="btn btn-outline-primary flex-fill"
+                      href="product.html"
+                      >Подробнее</a
+                    >
+                    <button
+                      class="btn btn-primary flex-fill"
+                      type="button"
+                      data-bs-toggle="modal"
+                      data-bs-target="#orderModal"
+                      data-product="Диван Nordic"
+                    >
+                      Заказать
+                    </button>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+              <article class="card product-card h-100 position-relative">
+                <span
+                  class="badge text-bg-warning position-absolute product-card__badge"
+                  >Скидка</span
+                >
+                <img
+                  class="card-img-top product-card__image"
+                  src="images/sofa-3.jpg"
+                  alt="Диван Chesterfield"
+                  width="640"
+                  height="480"
+                  loading="lazy"
+                />
+                <div class="card-body d-flex flex-column">
+                  <h3 class="card-title h5">Диван Chesterfield</h3>
+                  <p class="card-text text-body-secondary">
+                    Классический диван Честерфилд из фиолетового бархата.
+                  </p>
+                  <p class="price fs-5 mt-auto mb-3">72 500 руб.</p>
+                  <div class="d-flex flex-wrap gap-2">
+                    <a
+                      class="btn btn-outline-primary flex-fill"
+                      href="product.html"
+                      >Подробнее</a
+                    >
+                    <button
+                      class="btn btn-primary flex-fill"
+                      type="button"
+                      data-bs-toggle="modal"
+                      data-bs-target="#orderModal"
+                      data-product="Диван Chesterfield"
+                    >
+                      Заказать
+                    </button>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="container py-5" id="faq">
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-8">
+            <h2 class="text-center mb-4">Вопросы и ответы</h2>
+            <div class="accordion" id="faqAccordion">
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faq0"
+                    aria-expanded="true"
+                    aria-controls="faq0"
+                  >
+                    Сколько делается заказ?
+                  </button>
+                </h3>
+                <div
+                  id="faq0"
+                  class="accordion-collapse collapse show"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="accordion-body">
+                    Модели из наличия отправляем за 1–3 дня, под заказ — до 4
+                    недель.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faq1"
+                    aria-expanded="false"
+                    aria-controls="faq1"
+                  >
+                    Можно ли вернуть диван?
+                  </button>
+                </h3>
+                <div
+                  id="faq1"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="accordion-body">
+                    Да, в течение 14 дней, если сохранён товарный вид и
+                    упаковка.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faq2"
+                    aria-expanded="false"
+                    aria-controls="faq2"
+                  >
+                    Есть ли сборка?
+                  </button>
+                </h3>
+                <div
+                  id="faq2"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="accordion-body">
+                    Сборка и подъём на этаж входят в услуги доставки и
+                    оговариваются в заявке.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer bg-dark text-light py-4 mt-5">
+      <div class="container">
+        <div class="row g-3">
+          <div class="col-12 col-md-6">
+            <p class="fw-bold mb-1">ShopProject</p>
+            <p class="small text-secondary mb-0">
+              &copy; 2026 Учебный проект. Контрольная работа №2 — Bootstrap.
+            </p>
+          </div>
+          <div class="col-12 col-md-6 text-md-end small">
+            <a class="link-light me-3" href="catalog.html">Каталог</a>
+            <a class="link-light me-3" href="order.html">Заявка</a>
+            <a class="link-light" href="contacts.html">Контакты</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <a
+      class="btn btn-primary position-fixed bottom-0 end-0 m-3 shadow"
+      href="#top"
+      aria-label="Наверх"
+      >&uarr;</a
+    >
+
+    <div
+      class="alert alert-success d-none position-fixed top-0 start-50 translate-middle-x mt-3 shadow"
+      id="success-alert"
+      role="alert"
+    >
+      Заявка отправлена! Мы свяжемся с вами в ближайшее время.
+    </div>
+
+    <div
+      class="modal fade"
+      id="orderModal"
+      tabindex="-1"
+      aria-labelledby="orderModalLabel"
+      aria-hidden="true"
+    >
+      <div
+        class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable"
+      >
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title h5" id="orderModalLabel">
+              Оформление заявки
+            </h2>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Закрыть"
+            ></button>
+          </div>
+          <form
+            class="js-order-form"
+            id="modal-form"
+            action="#"
+            method="post"
+            novalidate
+          >
+            <div class="modal-body">
+              <div class="row g-3">
+                <div class="col-12 col-md-6">
+                  <label class="form-label" for="modal-name">Имя</label>
+                  <input
+                    class="form-control"
+                    id="modal-name"
+                    name="name"
+                    type="text"
+                    minlength="2"
+                    placeholder="Введите ваше имя"
+                    autocomplete="name"
+                    required
+                  />
+                  <div class="invalid-feedback">
+                    Укажите имя (не короче 2 символов).
+                  </div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <label class="form-label" for="modal-email">E-mail</label>
+                  <div class="input-group has-validation">
+                    <span class="input-group-text">@</span>
+                    <input
+                      class="form-control"
+                      id="modal-email"
+                      name="email"
+                      type="email"
+                      placeholder="example@mail.ru"
+                      autocomplete="email"
+                      required
+                    />
+                    <div class="invalid-feedback">
+                      Введите корректный e-mail.
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <label class="form-label" for="modal-phone">Телефон</label>
+                  <div class="input-group has-validation">
+                    <span class="input-group-text">+7</span>
+                    <input
+                      class="form-control"
+                      id="modal-phone"
+                      name="phone"
+                      type="tel"
+                      inputmode="tel"
+                      placeholder="(900) 000-00-00"
+                      pattern="[0-9 \(\)\-]{10,16}"
+                      autocomplete="tel-national"
+                      required
+                    />
+                    <div class="invalid-feedback">
+                      Введите номер, например (900) 000-00-00.
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <label class="form-label" for="modal-product"
+                    >Товар или тема заявки</label
+                  >
+                  <select
+                    class="form-select"
+                    id="modal-product"
+                    name="product"
+                    data-products
+                    required
+                  >
+                    <option value="">Выберите товар или тему</option>
+                    <option>Диван Amelia</option>
+                    <option>Диван Nordic</option>
+                    <option>Диван Chesterfield</option>
+                    <option>Диван Cozy</option>
+                    <option>Диван Scandi</option>
+                    <option>Консультация</option>
+                  </select>
+                  <div class="invalid-feedback">Выберите товар или тему.</div>
+                </div>
+                <div class="col-12">
+                  <label class="form-label" for="modal-comment"
+                    >Комментарий</label
+                  >
+                  <textarea
+                    class="form-control"
+                    id="modal-comment"
+                    name="comment"
+                    rows="3"
+                    placeholder="Укажите дополнительную информацию"
+                  ></textarea>
+                </div>
+                <div class="col-12">
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      id="modal-agreement"
+                      name="agreement"
+                      type="checkbox"
+                      required
+                    />
+                    <label class="form-check-label" for="modal-agreement"
+                      >Я согласен на обработку персональных данных</label
+                    >
+                    <div class="invalid-feedback">
+                      Необходимо согласие на обработку данных.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-outline-secondary"
+                data-bs-dismiss="modal"
+              >
+                Закрыть
+              </button>
+              <button type="submit" class="btn btn-primary">
+                Отправить заявку
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,109 @@
+/* Собственные стили поверх Bootstrap (подключается после bootstrap.min.css). */
+
+:root {
+  --shop-accent: #8a5a2b;
+  --shop-accent-dark: #6b4420;
+  --shop-bg-soft: #f7f3ee;
+  --bs-body-bg: #fcfbf9;
+  --bs-link-color: var(--shop-accent);
+  --bs-link-hover-color: var(--shop-accent-dark);
+}
+
+/* Фирменная кнопка (вариант btn-primary в цветах магазина). */
+.btn-primary {
+  --bs-btn-bg: var(--shop-accent);
+  --bs-btn-border-color: var(--shop-accent);
+  --bs-btn-hover-bg: var(--shop-accent-dark);
+  --bs-btn-hover-border-color: var(--shop-accent-dark);
+  --bs-btn-active-bg: var(--shop-accent-dark);
+  --bs-btn-active-border-color: var(--shop-accent-dark);
+  --bs-btn-disabled-bg: var(--shop-accent);
+  --bs-btn-disabled-border-color: var(--shop-accent);
+}
+
+.btn-outline-primary {
+  --bs-btn-color: var(--shop-accent);
+  --bs-btn-border-color: var(--shop-accent);
+  --bs-btn-hover-bg: var(--shop-accent);
+  --bs-btn-hover-border-color: var(--shop-accent);
+  --bs-btn-active-bg: var(--shop-accent-dark);
+  --bs-btn-active-border-color: var(--shop-accent-dark);
+}
+
+.navbar-brand {
+  letter-spacing: 0.04em;
+}
+
+/* Hero-блок с фоновым изображением. */
+.hero {
+  min-height: 420px;
+  color: #fff;
+  background:
+    linear-gradient(90deg, rgba(30, 20, 10, 0.78), rgba(30, 20, 10, 0.25)),
+    url("../images/sofa-1.jpg") center / cover no-repeat;
+}
+
+/* Карточки товаров. */
+.product-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.12);
+}
+
+.product-card__image {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.product-card__badge {
+  top: 0.75rem;
+  left: 0.75rem;
+}
+
+.price {
+  color: var(--shop-accent-dark);
+  font-weight: 700;
+}
+
+/* Липкий блок фильтров — только на широких экранах. */
+@media (min-width: 992px) {
+  .catalog-filters {
+    position: sticky;
+    top: 5.5rem;
+  }
+}
+
+/* Карусель на странице товара. */
+.product-carousel .carousel-item img {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.advantage-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  background: var(--shop-bg-soft);
+  color: var(--shop-accent);
+  font-size: 1.5rem;
+}
+
+.section-soft {
+  background: var(--shop-bg-soft);
+}
+
+.map-frame {
+  width: 100%;
+  min-height: 320px;
+  border: 0;
+}
+
+.site-footer a {
+  text-decoration: none;
+}
